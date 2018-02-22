@@ -25,19 +25,19 @@
 	$(function() {
         var mouseTest         = 'mouse',
             mouseHoverTest    = 'mouse-hover',
-            mouseEventPostfix = '.modernizr.mouse.events';
-
-        window.Modernizr.addTest(mouseTest, false);
-        window.modernizrOff(mouseTest);
-
-        //If Modernizr-test "touchevents" is included => use if to set "mouse-hover" else set "mouse-hover" = "mouse"
-        var hasModernizr = !!window.Modernizr,
+            mouseEventPostfix = '.modernizr.mouse.events',
+            hasModernizr = !!window.Modernizr,
             hasTouchEventsTest = hasModernizr && (jQuery.type( window.Modernizr['touchevents'] ) === "boolean"),
             hasTouchEvents = hasTouchEventsTest ? window.Modernizr['touchevents'] : true;
 
         if (hasModernizr)
+            window.Modernizr.addTest(mouseTest, false);
+        window.modernizrOff(mouseTest);
+
+        //If Modernizr-test "touchevents" is included => use if to set "mouse-hover" else set "mouse-hover" = "mouse"
+        if (hasModernizr)
             window.Modernizr.addTest( mouseHoverTest, !hasTouchEvents );
-        window.modernizrToggle(   mouseHoverTest, !hasTouchEvents );
+        window.modernizrToggle( mouseHoverTest, !hasTouchEvents );
 
         $(window)
             //Check for mouse
