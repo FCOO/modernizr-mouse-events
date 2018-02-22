@@ -1,0 +1,38 @@
+{
+  "name": "modernizr-mouse-events",
+  "version": "1.0.0",
+  "homepage": "https://github.com/FCOO/modernizr-mouse-events",
+  "authors": [
+    "Niels Holt"
+  ],
+  "description": "",
+  "main": [
+    "dist/modernizr-mouse-events.js",
+    "dist/modernizr-mouse-events.css"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/FCOO/modernizr-mouse-events.git"
+  },
+  "dependencies": {
+    "jquery": "latest",
+    "modernizr-javascript": "FCOO/modernizr-javascript#^1.1.2"
+  },
+  "devDependencies": {
+    "bourbon": "latest",
+    "modernizr-mixin": "latest",
+    "mathsass": "latest",
+    "modernizr-scss": "FCOO/modernizr-scss#latest"
+  },
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "moduleType": [
+    "es6"
+  ]
+}
